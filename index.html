@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {
+  fill: #006100;
+  stroke: #4DB84D;
+}
+
+path:hover {
+  fill: #4DB84D;
+}
+
+</style>
+<body>
+<script src="lib/d3.v3.min.js"></script>
+<script src="geoquiz.js"></script>
+<script>
+var states_file = "data/us-states.json"
+var cities_file = "data/us-cities.json"
+
+var width = 960,
+    height = 500;
+
+var path = d3.geo.path();
+
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json(states_file, function(error, shapes) {
+    d3.json(cities_file, function(error, cities) {
+        var miami_coords = cities.features[0].geometry.coordinates
+        
+        // display the distance from the pt to Miami (arbitrary first thing in
+        // our json file) when the map is clicked
+        onclick = function(gpscoords) { 
+            d = d3.geo.greatArc().distance({source: miami_coords,
+                                            target: gpscoords});
+            alert(d * 3958.76)
+        };
+        
+        svg = GameMapSVG(svg, d3.geo.albers(), shapes, onclick);
+
+    });
+});
+
+</script>
+

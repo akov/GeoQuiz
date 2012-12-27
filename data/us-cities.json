@@ -1,0 +1,39 @@
+{ "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-80.224145, 25.787676]},
+      "properties": {"name": "Miami", "population":" 1 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-84.39, 33.755]},
+      "properties": {"name": "Atlanta", "population":" 1 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-95.383056, 29.762778]},
+      "properties": {"name": "Houston", "population":" 1.2 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-87.6277, 41.881944]},
+      "properties": {"name": "Chicago", "population":" 6.1 million"}
+    },
+
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-71.066, 42.364]},
+      "properties": {"name": "Boston", "population":" 2.5 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-122.417, 37.779]},
+      "properties": {"name": "San Francisco-Oakland", "population":"2.7 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-73.987, 40.720]},
+      "properties": {"name": "New York", "population":"10 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-77.029, 38.896]},
+      "properties": {"name": "Washington", "population":"2 million"}
+    },
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [-118.247, 34.049]},
+      "properties": {"name": "Los Angeles", "population":"6.6 million"}
+    }]}
