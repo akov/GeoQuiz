@@ -35,7 +35,7 @@ var svg = d3.select("body").append("svg")
 
 d3.json(states_file, function(error, shapes) {
     d3.json(cities_file, function(error, cities) {
-        cities = shuffle_ar(cities.features)
+        cities = d3.shuffle(cities.features)
         game_loop(svg, d3.select("#cityname"), cities, shapes);
     });
 });
