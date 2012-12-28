@@ -31,7 +31,7 @@ var game_loop = function(svg, namebox, cities, shapes) {
     click_hndlr = function(gpscoords) { 
         d = d3.geo.greatArc().distance({source: city.geometry.coordinates, 
                                         target: gpscoords});
-        alert(d * 3958.76)
+        d3.select("#dist").text(d * 3958.76)
         game_loop(svg, namebox, cities, shapes);
     };
 
