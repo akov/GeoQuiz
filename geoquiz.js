@@ -15,13 +15,13 @@ var GameMapSVG = function(svg, proj, shapes, click_hndlr) {
 };
 
 var game_loop = function(svg, namebox, cities, shapes) { 
-    if (cities.features.length == 0) {
+    if (cities.length == 0) {
         namebox.text("Done!");
         svg = GameMapSVG(svg, d3.geo.albers(), shapes, function(x){})
         return;
     }
 
-    city = cities.features.pop();
+    city = cities.pop();
     namebox.text(city.properties.name);
 
     // for now we alert how many miles to the correct city 
