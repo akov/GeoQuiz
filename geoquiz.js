@@ -15,8 +15,9 @@ var GameMapSVG = function(svg, proj, shapes, click_hndlr) {
 };
 
 var game_loop = function(svg, namebox, cities, shapes) { 
-    if (cities.length == 0) {
+    if (cities.features.length == 0) {
         namebox.text("Done!");
+        svg = GameMapSVG(svg, d3.geo.albers(), shapes, function(x){})
         return;
     }
 
