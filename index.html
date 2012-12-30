@@ -10,8 +10,8 @@ path {
 
 </style>
 <body>
-    <div id="cityname"></div> 
-    <div id="dist"></div>
+    <div id="name"></div> </br>
+    Score: <div id="score"></div> </br>
 </body>
 <script src="lib/d3.v3.min.js"></script>
 <script src="util.js"></script>
@@ -30,7 +30,7 @@ var svg = d3.select("body").append("svg")
 d3.json(states_file, function(error, shapes) {
     d3.json(cities_file, function(error, cities) {
         cities = d3.shuffle(cities.features)
-        GeoGame.game_loop(svg, d3.select("#cityname"), cities, shapes);
+        GeoGame.game_loop(svg, d3.select("#name"), d3.select("#score"), cities, shapes);
     });
 });
 
