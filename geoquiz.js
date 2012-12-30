@@ -1,6 +1,7 @@
 // GeoGame 
 var GeoGame = (function(){
     var MARKER_WIDTH = 5;
+    var BIG_MARK = 50;
     var MARK_DURATION = 1000;
 
     var PLAYER_COLOR = '#990000'
@@ -31,10 +32,13 @@ var GeoGame = (function(){
         svg.append("circle")
            .attr("cx", x)
            .attr("cy", y)
-           .attr("r", MARKER_WIDTH)
+           .attr("r", BIG_MARK)
            .style("fill", color)
            .transition()
-           .duration(MARK_DURATION)
+           .duration(MARK_DURATION / 2)
+           .attr("r", MARKER_WIDTH)
+           .transition()
+           .duration(MARK_DURATION / 2)
            .style("opacity", 0)
     };
 

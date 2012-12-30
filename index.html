@@ -10,8 +10,10 @@ path {
 
 </style>
 <body>
-    <div id="name"></div> </br>
+    <center><div id="name"></div></br>
+    <div id="mapbox"></div> </br>
     Score: <div id="score"></div> </br>
+</center>
 </body>
 <script src="lib/d3.v3.min.js"></script>
 <script src="util.js"></script>
@@ -23,7 +25,7 @@ var cities_file = "data/us-cities.json"
 var width = 960,
     height = 500;
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#mapbox").append("svg")
     .attr("width", width)
     .attr("height", height);
 
